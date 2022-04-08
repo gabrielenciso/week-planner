@@ -34,6 +34,17 @@ function handleSubmitEntry(event) {
 function handleDayOfWeek(event) {
   console.log(event.target.outerText);
   console.log(typeof event.target.outerText);
+  var daysArr = [
+    'Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'
+  ];
+  if (!daysArr.includes(event.target.outerText)) {
+    return;
+  }
+  var stringDay = event.target.outerText.toLowerCase();
+  for (var i = 0; i < data.entries.length; i++) {
+    if (stringDay === data.entries[i].name) {}
+  }
+  console.log(stringDay);
 }
 
 $addEntryButton.addEventListener('click', handleNewEntry);
