@@ -4,9 +4,45 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Week Planner</title>
+  <link rel="stylesheet" href="reset.css">
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="layout.css">
 </head>
 <body>
+  <div class="overlay">
+    <div class="add-entry-form">
+      <h2>Add Entry</h2>
+      <form>
+        <div class="row">
+          <select name="day-of-week" class="day-of-week">
+            <option>Day of Week</option>
+            <option value="sunday">Sunday</option>
+            <option value="monday">Monday</option>
+            <option value="tuesday">Tuesday</option>
+            <option value="wednesday">Wednesday</option>
+            <option value="thursday">Thursday</option>
+            <option value="friday">Friday</option>
+            <option value="saturday">Saturday</option>
+          </select>
+          <select name="time" class="time-bar">
+            <option></option>
+          </select>
+        </div>
+        <div class="description">
+          <textarea name="description" class="description"></textarea>
+        </div>
+        <div class="form-actions">
+          <button>Submit</button>
+        </div>
+      </form>
+
+    </div>
+  </div>
+  <div class="container">
+    <h1>Weekly Planner</h1>
+    <button class="add-entry">Add Entry</button>
+  </div>
+
   <script src="main.js"></script>
 </body>
 </html>
