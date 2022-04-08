@@ -2,10 +2,15 @@
   display: none;
 }
 
-.column {
-
+.container {
+  width: 90%;
+  margin: 0 auto;
 }
 
-.row {
+/* .column {
 
+} */
+
+.row {
+  display: flex;
 }
