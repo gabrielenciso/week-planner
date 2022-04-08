@@ -6,7 +6,8 @@ var $time = document.querySelector('.time-bar');
 var $description = document.querySelector('.notes');
 
 var $weekTab = document.querySelector('.days-of-week');
-
+var $entryTime = document.querySelectorAll('time-value');
+var $entryDescrip = document.querySelectorAll('description-value');
 function handleNewEntry(event) {
   $modal.className = 'modal';
 }
@@ -24,6 +25,7 @@ function handleSubmitEntry(event) {
     description: $description.value,
     entryId: data.nextEntryId
   };
+
   data.nextEntryId++;
   data.entries.unshift(newEntryObj);
   $form.reset();
@@ -42,7 +44,12 @@ function handleDayOfWeek(event) {
   }
   var stringDay = event.target.outerText.toLowerCase();
   for (var i = 0; i < data.entries.length; i++) {
-    if (stringDay === data.entries[i].name) {}
+    if (stringDay === data.entries[i].name) {
+      for (var j = 0; j < data.entries[i].entries.length; j++) {
+        $entryTime[j].textContent = data.entries[i].entries[j].time;
+        $entryDescrip[j].textContent = data.entries[i].entries[j].notes;
+      }
+    }
   }
   console.log(stringDay);
 }
