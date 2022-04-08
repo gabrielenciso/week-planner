@@ -23,7 +23,9 @@ function handleSubmitEntry(event) {
     entryId: data.nextEntryId
   };
   data.nextEntryId++;
-  console.log('newEntryObj: ', newEntryObj);
+  data.entries.unshift(newEntryObj);
+  $form.reset();
+
   $modal.className = 'modal hidden';
 }
 
