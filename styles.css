@@ -24,7 +24,7 @@ textarea {
 /* class selector */
 
 .add-entry {
-  padding: 10px;
+  padding: 10px 30px;
   background-color: #6eb257;
   border-radius: 2px;
   border: none;
@@ -74,6 +74,8 @@ textarea {
 .days-of-week div {
   height: 80px;
   text-align: center;
+  font-family: "Grape Nuts", cursive;
+  font-size: 20px;
 }
 
 .col-10 {
@@ -81,5 +83,5 @@ textarea {
 }
 
 .container > div {
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
