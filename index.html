@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="layout.css">
 </head>
 <body>
-  <div class="overlay row justify-content-center margin-zero align-center">
+  <div class="overlay row justify-content-center margin-zero align-center hidden">
     <div class="add-entry-form">
       <h2 class="text-center">Add Entry</h2>
       <form>
@@ -32,16 +32,16 @@
           </select>
         </div>
         <div class="description">
-          <textarea name="description" class="description"></textarea>
+          <textarea name="description" placeholder="Description"></textarea>
         </div>
         <div class="form-actions">
-          <button>Submit</button>
+          <button class="submit-button">Submit</button>
         </div>
       </form>
 
     </div>
   </div>
-  <div class="container hidden">
+  <div class="container">
     <div class="row justify-content-center">
       <h1>Weekly Planner</h1>
     </div>

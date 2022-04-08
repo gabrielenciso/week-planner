@@ -22,8 +22,9 @@ h1 {
 
 .add-entry-form {
   background-color: white;
-  width: 400px;
-  height: 200px;
+  width: 600px;
+  height: 400px;
+  padding: 20px;
 }
 
 .margin-zero {
@@ -32,4 +33,19 @@ h1 {
 
 .text-center {
   text-align: center;
+}
+
+.add-entry-form select:nth-child(2) {
+  margin-left: 15px;
+}
+
+.description {
+  padding: 10px 0;
+}
+
+textarea {
+  resize: none;
+  padding: 8px;
+  width: 560px;
+  height: 150px;
 }
