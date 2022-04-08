@@ -23,14 +23,6 @@ textarea {
 
 /* class selector */
 
-.justify-content-center {
-  justify-content: center;
-}
-
-.align-center {
-  align-items: center;
-}
-
 .add-entry {
   padding: 10px;
   background-color: #6eb257;
@@ -77,4 +69,13 @@ textarea {
   border-radius: 2px;
   border: none;
   padding: 5px 10px;
+}
+
+.days-of-week div {
+  height: 80px;
+  text-align: center;
+}
+
+.days-of-week p {
+  margin: auto 0;
 }

@@ -15,7 +15,23 @@
   display: flex;
 }
 
+.col-10 {
+  width: 10%;
+}
+
 .form-actions {
   display: flex;
   justify-content: flex-end;
+}
+
+.justify-content-center {
+  justify-content: center;
+}
+
+.space-between {
+  justify-content: space-between;
+}
+
+.align-center {
+  align-items: center;
 }
