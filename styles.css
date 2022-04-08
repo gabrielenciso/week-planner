@@ -76,6 +76,10 @@ textarea {
   text-align: center;
 }
 
-.days-of-week p {
-  margin: auto 0;
+.col-10 {
+  border: 1px solid;
+}
+
+.container > div {
+  margin-bottom: 10px;
 }
