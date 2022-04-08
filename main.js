@@ -1,15 +1,15 @@
 var $addEntryButton = document.querySelector('.add-entry');
-var $overlay = document.querySelector('.overlay');
-var $submitNewEntry = document.querySelector('.submit-button');
+var $modal = document.querySelector('.modal');
+var $form = document.querySelector('form');
 
 function handleNewEntry(event) {
-  $overlay.className = 'overlay row justify-content-center margin-zero align-center';
+  $modal.className = 'modal';
 }
 
 function handleSubmitEntry(event) {
   event.preventDefault();
-  $overlay.className = 'overlay row justify-content-center margin-zero align-center hidden';
+  $modal.className = 'modal hidden';
 }
 
 $addEntryButton.addEventListener('click', handleNewEntry);
-$submitNewEntry.addEventListener('sumbit', handleSubmitEntry);
+$form.addEventListener('submit', handleSubmitEntry);

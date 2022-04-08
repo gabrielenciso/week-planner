@@ -12,35 +12,38 @@
   <link rel="stylesheet" href="layout.css">
 </head>
 <body>
-  <div class="overlay row justify-content-center margin-zero align-center hidden">
-    <div class="add-entry-form">
-      <h2 class="text-center">Add Entry</h2>
-      <form>
-        <div class="row">
-          <select name="day-of-week" class="day-of-week">
-            <option>Day of Week</option>
-            <option value="sunday">Sunday</option>
-            <option value="monday">Monday</option>
-            <option value="tuesday">Tuesday</option>
-            <option value="wednesday">Wednesday</option>
-            <option value="thursday">Thursday</option>
-            <option value="friday">Friday</option>
-            <option value="saturday">Saturday</option>
-          </select>
-          <select name="time" class="time-bar">
-            <option></option>
-          </select>
-        </div>
-        <div class="description">
-          <textarea name="description" placeholder="Description"></textarea>
-        </div>
-        <div class="form-actions">
-          <button class="submit-button">Submit</button>
-        </div>
-      </form>
+  <div class="modal hidden">
+    <div class="overlay row justify-content-center margin-zero align-center hidden">
+      <div class="add-entry-form">
+        <h2 class="text-center">Add Entry</h2>
+        <form>
+          <div class="row">
+            <select name="day-of-week" class="day-of-week">
+              <option>Day of Week</option>
+              <option value="sunday">Sunday</option>
+              <option value="monday">Monday</option>
+              <option value="tuesday">Tuesday</option>
+              <option value="wednesday">Wednesday</option>
+              <option value="thursday">Thursday</option>
+              <option value="friday">Friday</option>
+              <option value="saturday">Saturday</option>
+            </select>
+            <select name="time" class="time-bar">
+              <option></option>
+            </select>
+          </div>
+          <div class="description">
+            <textarea name="description" placeholder="Description"></textarea>
+          </div>
+          <div class="form-actions">
+            <button class="submit-button">Submit</button>
+          </div>
+        </form>
 
+      </div>
     </div>
   </div>
+
   <div class="container">
     <div class="row justify-content-center">
       <h1>Weekly Planner</h1>
