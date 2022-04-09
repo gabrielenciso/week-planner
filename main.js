@@ -8,24 +8,24 @@ var $description = document.querySelector('.notes');
 var $weekTab = document.querySelector('.days-of-week');
 var $entryTime = document.querySelectorAll('.time-value');
 var $entryDescrip = document.querySelectorAll('.description-value');
-console.log($entryTime);
+
 function handleNewEntry(event) {
   $modal.className = 'modal';
 }
 
 function handleSubmitEntry(event) {
   event.preventDefault();
-  // create an empty object for entry
-  // querySelect option dayofWeek value
-  // querySelect opttion time value
-  // querySelect description value
-  // assign entryId number
   var newEntryObj = {
-    day: $selectDayOfTheWeek.value,
     time: $time.value,
     description: $description.value,
     entryId: data.nextEntryId
   };
+
+  for (var i = 0; i < data.entries.length; i++) {
+    if ($selectDayOfTheWeek.value === data.entries[i].name) {
+      data.entries[i].entry.unshift(newEntryObj);
+    }
+  }
 
   data.nextEntryId++;
   data.entries.unshift(newEntryObj);
