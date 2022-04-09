@@ -18,7 +18,14 @@ var data = {
     },
     {
       name: 'friday',
-      entry: []
+      entry: [
+        {
+          day: 'day',
+          time: '12',
+          description: 'go do stuff',
+          entryId: 1
+        }
+      ]
     },
     {
       name: 'saturday',

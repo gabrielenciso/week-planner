@@ -6,8 +6,9 @@ var $time = document.querySelector('.time-bar');
 var $description = document.querySelector('.notes');
 
 var $weekTab = document.querySelector('.days-of-week');
-var $entryTime = document.querySelectorAll('time-value');
-var $entryDescrip = document.querySelectorAll('description-value');
+var $entryTime = document.querySelectorAll('.time-value');
+var $entryDescrip = document.querySelectorAll('.description-value');
+console.log($entryTime);
 function handleNewEntry(event) {
   $modal.className = 'modal';
 }
@@ -34,8 +35,11 @@ function handleSubmitEntry(event) {
 }
 
 function handleDayOfWeek(event) {
-  console.log(event.target.outerText);
-  console.log(typeof event.target.outerText);
+  for (var k = 0; k < $entryTime.length; k++) {
+    $entryTime[k].textContent = '';
+    $entryDescrip[k].textContent = '';
+  }
+
   var daysArr = [
     'Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'
   ];
@@ -45,13 +49,12 @@ function handleDayOfWeek(event) {
   var stringDay = event.target.outerText.toLowerCase();
   for (var i = 0; i < data.entries.length; i++) {
     if (stringDay === data.entries[i].name) {
-      for (var j = 0; j < data.entries[i].entries.length; j++) {
-        $entryTime[j].textContent = data.entries[i].entries[j].time;
-        $entryDescrip[j].textContent = data.entries[i].entries[j].notes;
+      for (var j = 0; j < data.entries[i].entry.length; j++) {
+        $entryTime[j].textContent = data.entries[i].entry[j].time;
+        $entryDescrip[j].textContent = data.entries[i].entry[j].description;
       }
     }
   }
-  console.log(stringDay);
 }
 
 $addEntryButton.addEventListener('click', handleNewEntry);
